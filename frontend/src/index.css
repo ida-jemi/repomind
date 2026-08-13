@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-site-bg text-site-bone font-body antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(200, 138, 61, 0.08), transparent),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 34px
+    );
+}
+
+::selection {
+  background: rgba(200, 138, 61, 0.35);
+}
+
+/* visible keyboard focus, kept subtle but real */
+:focus-visible {
+  outline: 2px solid theme("colors.site.amber");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+.strata-scroll::-webkit-scrollbar { height: 8px; }
+.strata-scroll::-webkit-scrollbar-thumb { background: theme("colors.site.line"); border-radius: 4px; }

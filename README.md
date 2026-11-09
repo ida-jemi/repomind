@@ -1,4 +1,4 @@
-# RepoMind — AI Software Archaeologist & Institutional Memory Engine
+# RepoMind - AI Software Archaeologist & Institutional Memory Engine
 
 RepoMind reconstructs the *story* of a codebase. Point it at any public GitHub
 repository and it:
